@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+    <title>
+        PROYECTO MACHINE LEARNING
+    </title>
+    <meta charset="UTF-8" />
+	<link rel="stylesheet" href="{% static 'css/general.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mostrar.css' %}">
+    <header>
+        <h1 id = "titulo"> RESULTADOS </h1>
+		<a href="/mi_app/"><img src="{% static 'images/mascotas.jpg' %}" alt="mascotas" id="tituloImangen">
+		<input id="tituloTexto" type="search" placeholder="Buscar">
+		<img src="{% static 'images/Principal/perfil.jpg' %}" alt="perfil" id="imagenPerfil">
+		<img src="{% static 'images/Principal/correo.png' %}" alt="correo" id="imagenCorreo">
+    </header>
+    <section class="sectionContenido">
+        <h2 hidden> CONTENIDO </h2>
+        <article>
+            <h2 style="color:white; margin-left: 25%; font-size:70px;"> Se obtuvo el siguiente resultado </h2>
+            <h3 style="color:white; margin-left: 40%; font-size:50px;"> Animal: {{ clase }}</h3>
+            <h3 style="color:white; margin-left: 40%; font-size:50px;"><em>Estimacion: {{ valor }} %</em></h3>
+        </article>
+    </section>
+</html>

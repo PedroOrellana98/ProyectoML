@@ -1,0 +1,30 @@
+.sectionContenido {
+    float: left;
+    margin-top: 30px;
+    width: 80%;
+    margin-left: 4%;
+}
+
+body{
+    background-image: url(https://i.pinimg.com/originals/af/8d/63/af8d63a477078732b79ff9d9fc60873f.jpg);
+    background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+#titulo {
+    color: white !important;
+}
+
+.asideMap {
+    text-align: right;
+}
+
+.frameMap {
+    width: 300px;
+    height: 150px;
+}
+
+.imagesAlmacenamiento {
+    width: 200px;
+    height: 150px;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+    <title>
+        PROYECTO MACHINE LEARNING
+    </title>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" href="{% static 'css/general.css' %}">
+    <link rel="stylesheet" href="{% static 'css/principal.css' %}">
+    <header>
+		<img src="{% static 'images/mascotas.jpg' %}" alt="mascotas" id="tituloImangen">
+		<input id="tituloTexto" type="search" placeholder="Buscar">
+		<img src="{% static 'images/Principal/perfil.jpg' %}" alt="perfil" id="imagenPerfil">
+		<img src="{% static 'images/Principal/correo.png' %}" alt="correo" id="imagenCorreo">
+    </header>
+    <section id = "sectionHardware">
+        <article class = "articleHardware">
+            <h2> Pagina Principal </h2>
+            <form action="/mi_app/predecir/" enctype="multipart/form-data" method="POST">
+				{% csrf_token %}
+				<input name="elm_imagen" type="file" class="entrar"><br>
+				<input type="submit" value="Predecir Imagen" class="button">
+        </form>
+        </article>
+    </section>
+    <section id = "sectionValoracion">
+        <h1> VALORACIONES </h1>
+        <article class="articleValoracion">
+            <h2 hidden> Valoracion </h2>
+            <div class= "divImagen">
+				<img src="{% static 'images/Principal/feliz.jpg' %}" alt="perfil" id="imagenValoracion">
+            </div>
+            <div class="estrellas">
+                <a data-value="1">&#9733;</a>
+                <a data-value="2">&#9733;</a>
+                <a data-value="3">&#9733;</a>
+                <a data-value="4">&#9733;</a>
+                <a data-value="5">&#9733;</a>
+            </div>
+        </article>
+        <aside class="asideValoracion">
+            <p><i>"El diseño se ajusta totalmente a lo que buscamos. Una imagen atractiva y limpia en un diseño funcional, cómodo e intuitivo. Todo con una atención personalizada gracias a la cual se han podido entender las necesidades de mi despacho."</i></p>
+        </aside>
+    </section>
+    <footer>
+        <div id = "footerInfo">
+            <div id = "divImage1">
+				<img src="{% static 'images/Principal/facebook.png' %}" alt="facebook" id="imagenFacebook">
+				<img src="{% static 'images/Principal/instagram.png' %}" alt="instagram" id="imagenInstagram">
+            </div>
+            <div id = "divImage2">
+				<img src="{% static 'images/Principal/contacto.png' %}" alt="contacto" id="imagenContacto">
+            </div>
+            <div id = "divCopy">
+                &copy; Todos los derechos reservados
+            </div>
+        </div>
+        <div id = "footerContacto">
+            <form>
+                <fieldset>
+                    <legend> Quien Soy </legend>
+                        <label class="labelContacto"> PEDRO JOSE ORELLANA </label>
+                        <label class="labelContacto"> Correo: <a href="mailto:porellanaj@est.ups.edu.ec"> 
+                        porellanaj@est.ups.edu.ec </a> </label>
+                        <label class="labelContacto"> Telefono: <a href="tel:+59398550859"> 
+                            0998550859 </a> </label>
+                            <label class="labelContacto"> UNIVERSIDAD POLITECNICA SALESIANA </label>
+                </fieldset>
+            </form>
+        </div>
+        <div id = "footerLocalizacion">
+            <iframe id = "localizacion"
+            src="https://maps.google.com/?ll=-2.886850,-78.989353&z=16&output=embed"></iframe>
+        </div>
+    </footer>
+</html>
